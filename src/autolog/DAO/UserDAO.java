@@ -26,7 +26,8 @@ public class UserDAO extends DataBaseDAO {
      * @return Boolean true if credentials are accurate. False if not
      */
     public User isAuthenticated(String username, String password) {
-    	con = getRemoteConnection();
+    	//con = getRemoteConnection();
+    	con = getConnection();
     	
     	u = null;
     	

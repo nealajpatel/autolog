@@ -24,7 +24,8 @@ public class ServiceEntryDAO extends DataBaseDAO {
     
     public ArrayList<ServiceEntry> getAllServiceEntries(int vehicleID) throws SQLException {
     	ArrayList<ServiceEntry> serviceEntryList = new ArrayList<ServiceEntry>();
-    	con = getRemoteConnection();
+    	//con = getRemoteConnection();
+    	con = getConnection();
     	se = new ServiceEntry(0, 0, null, null, null, 0);
     	
     	try {
@@ -80,7 +81,9 @@ public class ServiceEntryDAO extends DataBaseDAO {
     }
     
     public void addServiceEntry(int vehicleID, String desc, Date date, BigDecimal cost, int mileage) throws SQLException{
-    	con = getRemoteConnection();
+    	//con = getRemoteConnection();
+    	con = getConnection();
+    	
     	try {
             st = con.createStatement();
             try {
@@ -107,7 +110,9 @@ public class ServiceEntryDAO extends DataBaseDAO {
     }
     
     public void deleteServiceEntry(int ID) throws SQLException {
-    	con = getRemoteConnection();
+    	//con = getRemoteConnection();
+    	con = getConnection();
+
     	try {
             st = con.createStatement();
             try {
@@ -130,7 +135,9 @@ public class ServiceEntryDAO extends DataBaseDAO {
     }
     
     public void editServiceEntry(int seID, String desc, Date date, BigDecimal cost, int mileage) throws SQLException{
-    	con = getRemoteConnection();
+    	//con = getRemoteConnection();
+    	con = getConnection();
+
     	try {
             st = con.createStatement();
             try {

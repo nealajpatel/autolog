@@ -21,8 +21,8 @@ public abstract class DataBaseDAO {
     	  //System.out.println("Here2");
     	  //System.out.println("Here");
           String dbName = "ebdb";
-          String userName = "napatel5";
-          String password = "Simran22";
+          String userName = "nealajpatel";
+          String password = "";
           //String hostname = "autologdb.ccdoctkvqcql.us-east-2.rds.amazonaws.com";
           String hostname = "aa1k7m7c0lkotq2.ccdoctkvqcql.us-east-2.rds.amazonaws.com";
           String port = "3306";
@@ -51,8 +51,8 @@ public abstract class DataBaseDAO {
 		}
         try {
             // db parameters
-            //String url = "jdbc:sqlite:/Users/nealpatel/test.db";
-        	String url = "jdbc:mysql://autologdb.ccdoctkvqcql.us-east-2.rds.amazonaws.com:3306/autologdb?user=napatel5&password=Simran22";
+            String url = "jdbc:sqlite:/Users/nealpatel/test.db";
+        	//String url = "jdbc:mysql://autologdb.ccdoctkvqcql.us-east-2.rds.amazonaws.com:3306/autologdb?user=napatel5&password=Simran22";
             // create a connection to the database
             con = DriverManager.getConnection(url);
         } catch (SQLException e) {

@@ -75,7 +75,9 @@ public class VehicleDAO extends DataBaseDAO {
 
     public ArrayList<Vehicle> getAllVehicles(int userID) throws SQLException {
     	ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
-    	con = getRemoteConnection();
+    	//con = getRemoteConnection();
+    	con = getConnection();
+
     	v = new Vehicle(0, 0, null, null, 0, 0);
     	
     	try {
@@ -131,7 +133,9 @@ public class VehicleDAO extends DataBaseDAO {
     }
     
     public void addVehicle(int userID, String make, String model, int year, int mileage) throws SQLException{
-    	con = getRemoteConnection();
+    	//con = getRemoteConnection();
+    	con = getConnection();
+
     	try {
             st = con.createStatement();
             try {
@@ -157,7 +161,9 @@ public class VehicleDAO extends DataBaseDAO {
     	closeConnection();
     }
     public void deleteVehicle(int ID) throws SQLException {
-    	con = getRemoteConnection();
+    	//con = getRemoteConnection();
+    	con = getConnection();
+
     	try {
             st = con.createStatement();
             try {
@@ -180,7 +186,9 @@ public class VehicleDAO extends DataBaseDAO {
     }
     
     public void editVehicle(int vehicleID, String make, String model, int year, int mileage) throws SQLException{
-    	con = getRemoteConnection();
+    	//con = getRemoteConnection();
+    	con = getConnection();
+
     	try {
             st = con.createStatement();
             try {
